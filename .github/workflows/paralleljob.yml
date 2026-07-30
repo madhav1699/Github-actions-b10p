@@ -8,7 +8,7 @@ jobs:
       - name: Checkout Code
         run: echo "Code checked out successfully."
       - name: Verify Checkout
-        run: echo "verified"
+        runs: echo "verified"
   my-second-job:
     runs-on: ubuntu-latest
     steps:
