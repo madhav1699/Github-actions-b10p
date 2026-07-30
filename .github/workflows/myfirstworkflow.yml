@@ -1,0 +1,9 @@
+name: myfirstworkflow
+on:
+  workflow_dispatch:
+jobs:
+  myfirstjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git code checkout
+        run: echo "code is checked out"
