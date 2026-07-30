@@ -2,34 +2,26 @@ name: 2ndworkflow
 on:
   workflow_dispatch:
 jobs:
-  Codecheckout:
+  codecheckout:
     runs-on: ubuntu-latest
     steps:
       - name: Git code checkout
         run: echo "code is checked out"
-        
-      - name: Code checkout from
-jobs:
-  Build:
+      - name: verify code checkout
+        run: |
+          echo "code checkout is verified"
+  build:
     runs-on: ubuntu-latest
     needs: codecheckout
     steps:
       - name: Build the code
         run: echo "code is built"
-jobs:
-  Test:
+  test:
     runs-on: ubuntu-latest
-    needs: 
+    needs:
       - codecheckout
       - build
     steps:
       - name: Test the Code
         run: echo "code test is completed"
-
-
-
-
       
-    steps:
-      - name: Test the code
-        run: echo "code is tested"
