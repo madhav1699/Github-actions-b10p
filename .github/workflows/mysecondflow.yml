@@ -9,7 +9,6 @@ jobs:
         run: echo "code is checked out"
         
       - name: Code checkout from
-        run: {{ github.event.inputs.codecheckoutfrom }}
   Build:
     runs-on: ubuntu-latest
     needs: codecheckout
