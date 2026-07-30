@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Git code checkout
         run: echo "code is checked out"
-    steps:
+        
       - name: Sonar Analysis
         run: |
           echo "Sonar Analysis is done"
