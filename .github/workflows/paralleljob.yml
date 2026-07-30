@@ -1,0 +1,21 @@
+name: my-parallel-job
+on:
+  workflow_dispatch:
+jobs:
+  my-first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        runs: echo "Code checked out successfully."
+      - name: Verify Checkout
+        run: exit 1
+  my-second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code for 2nd Job
+        runs: |
+          echo "Code checked out successfully for 2nd job."
+          echo "This job runs in parallel with the first job."
+      - name: Verify Checkout
+        run: echo "Checkout verified successfully."
+  
