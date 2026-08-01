@@ -1,7 +1,10 @@
 name: workflow_1
 on:
   push:
-    branches: main
+    branches: 
+      - main
+    paths-ignore:
+      - ".github/*"
 jobs:
   my-first-job:
     runs-on: ubuntu-latest
