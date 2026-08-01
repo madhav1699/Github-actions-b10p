@@ -9,6 +9,7 @@ jobs:
         run: |
           echo "Hello world"
           echo "how are you?"
+          sleep 30
       - name: performing step-2
         run: echo "step 3 is completed"
   my-second-job:
