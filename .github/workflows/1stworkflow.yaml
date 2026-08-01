@@ -10,8 +10,11 @@ jobs:
           echo "Hello world"
           echo "how are you?"
       - name: performing step-2
-        run: exit 1
-      - name: performing step-3
         run: echo "step 3 is completed"
+  my-second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: second-job
+        run: echo "parallel job implementation"
       
           
