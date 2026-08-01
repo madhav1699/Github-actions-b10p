@@ -1,10 +1,11 @@
 name: workflow_1
 on:
-  push:
+  pull_request: 
     branches: 
       - main
     paths:
       - ".github/**"
+      - README.md
 jobs:
   my-first-job:
     runs-on: ubuntu-latest
