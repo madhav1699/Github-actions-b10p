@@ -1,0 +1,22 @@
+name: workflow-2
+on:
+  workflow_run: 
+    workflows:
+      - workflow_1
+jobs:
+  testing-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: This is for testing workflow method
+        run: |
+          echo "workflow triggered after 1st workflow"
+          echo "Github workflow is: ${{ github.event_name }}"
+          echo "Github repository is: ${{ github.repository }}"
+          echo "Github branch is: ${{ github.ref_name }}"
+          echo "Github Actor is: ${{ github.actor }}"
+          echo "Github sha is: ${{ github.sha }}"
+          
+        
+      
+
+    
