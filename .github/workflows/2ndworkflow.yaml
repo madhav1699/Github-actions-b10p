@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: This is for testing workflow method
         run: |
-          echo: "workflow is started after 1st is completed"
+          echo "workflow is started after 1st is completed"
           sleep 10
           echo "workflow triggered after 1st workflow"
           echo "Github workflow is: ${{ github.event_name }}"
